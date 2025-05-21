@@ -15,8 +15,12 @@ Este projeto é um sistema de gerenciamento de vendas e estoque de sacolés. Ele
 - Visualizar o estoque atual de sacolés.
 - Registrar produção de novos sacolés.
 
-### 💲 Configuração de Preços
+### ⚙ Configuração de Preços
 - Configurar preços para os tipos de sacolés (normal e gourmet).
+
+### 💲 Vendas de Sacolés
+- Registrar as vendas do sacolés. *(em desenvolvimento)*
+- Calculo automático do estoque. *(em desenvolvimento)*
 
 ### 📊 Relatórios
 - Relatórios gerais *(em desenvolvimento)*.
@@ -49,12 +53,12 @@ Este projeto é um sistema de gerenciamento de vendas e estoque de sacolés. Ele
 - HTML5, 
 - CSS3, 
 - JavaScript (puro)
-- [Bootstrap](https://getbootstrap.com/) para responsividade
-- [Font Awesome](https://fontawesome.com/) para ícones
+- [Bootstrap](https://getbootstrap.com/) (para responsividade)
+- [Font Awesome](https://fontawesome.com/) (para ícones)
 
 ### 🔸 Backend
 - PHP (sem framework)
-- PDO para acesso ao MySQL
+- PDO, para acesso ao MySQL
 
 ### 🔸 Banco de Dados
 - MySQL
@@ -75,8 +79,8 @@ Este projeto é um sistema de gerenciamento de vendas e estoque de sacolés. Ele
 4. Importe o arquivo SQL para criar as tabelas necessárias.
 
 5. Acesse o sistema no navegador:
-[text](http://localhost/sacoleVendas)
-
+   ```bash
+   http://localhost/sacoleVendas
 
 ## 🗄️ Estrutura do Banco de Dados
 
