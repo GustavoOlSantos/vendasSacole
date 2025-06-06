@@ -9,9 +9,9 @@
 
     <div class="form-group">
         <label for="tipo">Tipo do Sacolé: </label>
-        <select name="tipo" id="tipo" onchange="getPreco(this.value)">
-            <option value='1' <?= $sacole->getCodTipo() == 1 ? 'selected' : '' ?>>normal</option>
-            <option value='2' <?= $sacole->getCodTipo() == 2 ? 'selected' : '' ?>>gourmet</option>
+        <select name="tipo" id="tipo" onchange="getPreco(this.value)" class="form-control">
+            <option value='1' <?= $sacole->getCodTipo() == 1 ? 'selected' : '' ?>>Tradicional</option>
+            <option value='2' <?= $sacole->getCodTipo() == 2 ? 'selected' : '' ?>>Gourmet</option>
         </select>
     </div>
 

@@ -33,4 +33,14 @@ class Sacole {
     public function isValidoCadastro(){
         return !empty($this->sabor) && !empty($this->tipo);
     }
+
+    public static function listaArrayToObject($array) {
+        $sacoles = [];
+
+        foreach ($array as $arr) {
+            $sacoles[] = new Sacole($arr['id'], $arr['sabor'], $arr['codTipo'],  $arr['tipo'], $arr['preco'], $arr['quantidade']);
+        }
+
+        return $sacoles;
+    }
 }

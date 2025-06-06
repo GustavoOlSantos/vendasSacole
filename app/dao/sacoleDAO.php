@@ -38,6 +38,11 @@ class SacoleDAO {
         return $query->execute([$s->getSabor(), $s->getTipo(), $s->getId()]);
     }
 
+    public function atualizarQuantidade($id, $quantidade) {
+        $query = $this->conn->prepare("UPDATE sacoles SET quantidade = quantidade + ? WHERE id = ?");
+        return $query->execute([$quantidade, $id]);
+    }
+
     public function apagar($id) {
         $query = $this->conn->prepare("DELETE FROM sacoles WHERE id = ?");
         return $query->execute([$id]);
