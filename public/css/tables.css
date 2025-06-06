@@ -1,35 +1,46 @@
+/* Estilo modernizado da tabela */
 table {
+    width: 100%;
     border-collapse: collapse;
-    border: 2px solid rgb(140 140 140);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-thead {
-    background-color: #5F2885;
-    color: #fff;
-}
-
-th,
-td {
-    border: 1px solid rgb(160 160 160);
-    padding: 8px 10px;
-}
-
-tbody>tr:nth-of-type(even) {
-    background-color: rgb(237 238 242);
-}
-
-.tableAction {
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.9rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  thead, th {
+    background-color: #5F2885 !important;
+    color: #fff !important;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  tbody > tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody > tr:hover {
+    background-color: #e9e2f5;
+    transition: 0.2s;
+  }
+  
+  .tableAction {
     padding: 5px;
     color: #fff !important;
     border-radius: .25rem;
-}
-
-.tableAction.edit {
+  }
+  
+  .tableAction.edit {
     background-color: #0C592D;
-}
-
-.tableAction.del {
+  }
+  
+  .tableAction.del {
     background-color: #790707;
-}
+  }
+  

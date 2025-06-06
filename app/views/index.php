@@ -1,112 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sedgwick Ave">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans">
-
-    <script src="https://kit.fontawesome.com/4a077ed16e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../public/css/main.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vendas de Sacolé</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=PT+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap e FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a077ed16e.js" crossorigin="anonymous"></script>
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="../../public/css/main.css" />
 </head>
 
 <body>
 
     <?php include('menu.php') ?>
 
-    <div class="welcome">
-        <p>Bem vindo!</p>
-    </div>
+    <div class="container py-4">
+        <section class="welcome text-center mt-4">
+            <h2 class="font-weight-bold">Bem vindo!</h2>
+        </section>
 
-    <div class="container">
+        <div class="row g-4 justify-content-center">
 
-        <div class="all-card">
-            <div class="options-wrap">
-                <a class="card venda" href="vendas/">
-
-                    <div class="card-content">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-cash-register"></i>
-                        </div>
-
-                        <div class="card-title">
-                            <h6 class="titulo"> Venda de Sacolé</h6>
-                            <h6 class="subtitulo"> Nova venda de sacolés</h6>
+            <!-- Card Venda -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="vendas/" class="card h-100 text-white text-decoration-none bg-venda shadow-sm card-hover">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fa-solid fa-cash-register fa-2x me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Venda de Sacolé</h5>
+                            <small>Nova venda de sacolés</small>
                         </div>
                     </div>
-
-                    <div class="card-footer">
-                        <h6>Acessar</h6> <i class="fa-solid fa-circle-arrow-right"></i>
+                    <div class="card-footer bg-dark bg-opacity-50 d-flex justify-content-between align-items-center">
+                        <span>Acessar</span><i class="fa-solid fa-circle-arrow-right"></i>
                     </div>
                 </a>
-
-                <a class="card estoque" href="../controller/estoque/listarEstoque.php">
-
-                    <div class="card-content">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-snowflake"></i>
-                        </div>
-
-                        <div class="card-title">
-                            <h6 class="titulo"> Estoque</h6>
-                            <h6 class="subtitulo"> Controle de estoque de sacolés.</h6>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <h6>Acessar</h6> <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                </a>
-
-                <a class="card estoque" href="../controller/produtos/listarProdutos.php">
-
-                    <div class="card-content">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-tag"></i>
-                        </div>
-
-                        <div class="card-title">
-                            <h6 class="titulo"> Produtos</h6>
-                            <h6 class="subtitulo"> Controle de sacolés disponíveis.</h6>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <h6>Acessar</h6> <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                </a>
-
-                <a class="card relatorio" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <div class="card-content">
-                        <div class="card-icon">
-                            <i class="fa-regular fa-folder-open"></i>
-                        </div>
-
-                        <div class="card-title">
-                            <h6 class="titulo">Relatórios</h6>
-                            <h6 class="subtitulo"> Relatórios gerais</h6>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <h6>Acessar</h6> <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                </a>
-
-                <!-- <div name="relatorios" class="dropdown-menu relat" aria-labelledby="dropdownMenuButton">
-                    <div class="glass"></div>
-
-                    <a class="dropdown-item" href="">Vendas Mensais</a>
-                    <div class="dropdown-divider"></div>
-                </div> -->
             </div>
+
+            <!-- Card Estoque -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="../controller/estoque/listarEstoque.php" class="card h-100 text-white text-decoration-none bg-estoque shadow-sm card-hover">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fa-solid fa-snowflake fa-2x me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Estoque</h5>
+                            <small>Controle de estoque de sacolés</small>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-dark bg-opacity-50 d-flex justify-content-between align-items-center">
+                        <span>Acessar</span><i class="fa-solid fa-circle-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card Produtos -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="../controller/produtos/listarProdutos.php" class="card h-100 text-white text-decoration-none bg-produto shadow-sm card-hover">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fa-solid fa-tag fa-2x me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Produtos</h5>
+                            <small>Controle de sacolés disponíveis</small>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-dark bg-opacity-50 d-flex justify-content-between align-items-center">
+                        <span>Acessar</span><i class="fa-solid fa-circle-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card Relatórios -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="#" class="card h-100 text-white text-decoration-none bg-relatorio shadow-sm card-hover">
+                    <div class="card-body d-flex align-items-center">
+                        <i class="fa-regular fa-folder-open fa-2x me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Relatórios</h5>
+                            <small>Relatórios gerais</small>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-dark bg-opacity-50 d-flex justify-content-between align-items-center">
+                        <span>Acessar</span><i class="fa-solid fa-circle-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
