@@ -22,7 +22,7 @@
 
     <div class="form-options">
         <button type="submit" class="btn btn-success">Salvar</button>
-        <button type="button" class="btn btn-secondary"data-dismiss="modal">Cancelar</button>              
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>              
     </div>
 </form>
 

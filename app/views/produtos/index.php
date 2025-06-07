@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <?php include('../../views/menu.php') ?>
+  <?php include('../../views/partials/menu.php') ?>
 
   <section class="welcome text-center mt-4">
     <h2 class="font-weight-bold">Sacolés Disponíveis para Venda</h2>
@@ -36,10 +36,10 @@
 
   <div class="container my-4">
     <div class="table-responsive">
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr>
-            <th>#</th>
+            <th hidden >#</th>
             <th>Sabor</th>
             <th>Tipo</th>
             <th>Valor</th>
@@ -50,7 +50,7 @@
         <tbody>
           <?php foreach ($sacoles as $sacole): ?>
             <tr>
-              <td><?= $sacole->getId(); ?></td>
+              <td hidden ><?= $sacole->getId(); ?></td>
               <td><?= $sacole->getSabor(); ?></td>
               <td><?= $sacole->getTipo(); ?></td>
               <td>R$ <?= number_format($sacole->getPreco(), 2, ',', '.'); ?></td>
@@ -127,7 +127,7 @@
 
           <div class="form-options">
             <button type="submit" class="btn btn-success">Salvar</button>
-            <button type="button" class="btn btn-secondary"data-dismiss="modal">Cancelar</button>              
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>              
         </div>
         </form>
         
@@ -168,7 +168,7 @@
 
           <div class="form-options">
             <button type="submit" class="btn btn-success">Confirmar</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>              
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>              
           </div>
         </form>
 
@@ -215,7 +215,7 @@
 
               <div class="form-options">
                 <button type="submit" class="btn btn-success">Confirmar</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>              
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>              
               </div>
           </div>
       </div>

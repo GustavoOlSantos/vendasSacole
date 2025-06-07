@@ -29,7 +29,7 @@
 
 <body>
 
-    <?php include('../../views/menu.php') ?>
+    <?php include('../../views/partials/menu.php') ?>
 
     <section class="welcome text-center mt-4">
       <h2 class="font-weight-bold">Estoque atual de Sacolés</h2>
@@ -40,17 +40,24 @@
         <table class="table">
           <thead>
             <tr>
-              <th>#</th>
+              <th  hidden >#</th>
               <th>Sabor</th>
               <th>Quantidade</th>
+              <th>V. Unid</th>
+              <th>V. Total</th>
             </tr>
           </thead>
           <tbody>
             <?php foreach ($sacoles as $sacole) : ?>
-              <tr>
-                <td><?= $sacole->getId() ?></td>
+
+              <?php $flag = $sacole->getQuantidade() == 0 ? "table-danger" : ""; ?>
+
+              <tr class="<?= $flag ?>">
+                <td hidden ><?= $sacole->getId() ?></td>
                 <td><?= $sacole->getSabor() ?></td>
                 <td><?= $sacole->getQuantidade() ?></td>
+                <td><?= "R$". number_format($sacole->getPreco(), 2, ',', '.') ?></td>
+                <td><?= "R$". number_format($sacole->getQuantidade() * $sacole->getPreco(), 2, ',', '.') ?></td>
               </tr>
             <?php endforeach; ?>
           </tbody>
@@ -84,7 +91,7 @@
             </select>
 
             <input type="number" class="form-control" style="width: 80px;" min="0" name="qtdProduzida" id="qtdProduzida" placeholder="Qtd.">
-            <button onclick="registrarProducao()" class="btn btn-info">Ok</button>
+            <button onclick="registrarProducao()" class="btn btn-info mr-2">Ok</button>
           </div>
 
           <hr>
@@ -94,7 +101,7 @@
 
           <div class="container flex-form-group px-0 mt-3">
             <button onclick="enviarProduzidos()" class="btn btn-success">Enviar Produzidos</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="desfazerLista()">Fechar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="desfazerLista()">Fechar</button>
           </div>
         </div>
       </div>

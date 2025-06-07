@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . '/../../config/url.php'); ?>
+<?php require_once(__DIR__ . '/../../../config/url.php'); ?>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark px-4 shadow-sm">
     <div class="container-fluid">

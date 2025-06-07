@@ -19,13 +19,14 @@
 
 <body>
 
-    <?php include('menu.php') ?>
+    <?php include('partials/menu.php') ?>
+
+    
+    <section class="welcome text-center mt-4">
+        <h2 class="font-weight-bold">Bem vindo!</h2>
+    </section>
 
     <div class="container py-4">
-        <section class="welcome text-center mt-4">
-            <h2 class="font-weight-bold">Bem vindo!</h2>
-        </section>
-
         <div class="row g-4 justify-content-center">
 
             <!-- Card Venda -->
