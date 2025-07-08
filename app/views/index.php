@@ -21,7 +21,7 @@
 
     <?php include('partials/menu.php') ?>
 
-    
+
     <section class="welcome text-center mt-4">
         <h2 class="font-weight-bold">Bem vindo!</h2>
     </section>
@@ -31,7 +31,8 @@
 
             <!-- Card Venda -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <a href="vendas/" class="card h-100 text-white text-decoration-none bg-venda shadow-sm card-hover">
+                <a href="../controller/vendas/novaVenda.php"
+                    class="card h-100 text-white text-decoration-none bg-venda shadow-sm card-hover">
                     <div class="card-body d-flex align-items-center">
                         <i class="fa-solid fa-cash-register fa-2x me-3"></i>
                         <div>
@@ -47,7 +48,8 @@
 
             <!-- Card Estoque -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <a href="../controller/estoque/listarEstoque.php" class="card h-100 text-white text-decoration-none bg-estoque shadow-sm card-hover">
+                <a href="../controller/estoque/listarEstoque.php"
+                    class="card h-100 text-white text-decoration-none bg-estoque shadow-sm card-hover">
                     <div class="card-body d-flex align-items-center">
                         <i class="fa-solid fa-snowflake fa-2x me-3"></i>
                         <div>
@@ -63,7 +65,8 @@
 
             <!-- Card Produtos -->
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <a href="../controller/produtos/listarProdutos.php" class="card h-100 text-white text-decoration-none bg-produto shadow-sm card-hover">
+                <a href="../controller/produtos/listarProdutos.php"
+                    class="card h-100 text-white text-decoration-none bg-produto shadow-sm card-hover">
                     <div class="card-body d-flex align-items-center">
                         <i class="fa-solid fa-tag fa-2x me-3"></i>
                         <div>

@@ -20,6 +20,12 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link active" href="<?php echo BASE_URL."/app/controller/vendas/novaVenda.php" ?>">
+                        <i class="fa-solid fa-cash-register me-1"></i>Vendas
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link active" href="<?php echo BASE_URL."/app/controller/estoque/listarEstoque.php" ?>">
                         <i class="fa-solid fa-snowflake me-1"></i>Estoque
                     </a>
