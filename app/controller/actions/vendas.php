@@ -13,8 +13,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
             $id = $_POST['id'];
             $qtd = $_POST['qtd'];
+            $qtdEmEstoque = $_POST['qtdEmEstoque'];
 
-            crudVenda::listarProduto($id, $qtd);
+            crudVenda::listarProduto($id, $qtd, $qtdEmEstoque);
+        break;
+
+        case 'checaPedido': 
+            crudVenda::checaPedido();
+        break;
+
+        case 'carregarPagamento':
+            $formaPg = $_POST['formaPagamento'];
+            crudVenda::carregarPagamento($formaPg);
+        break;
+
+        case 'registrarVenda': 
+            crudVenda::registrarVenda();
         break;
 
         case 'apagarSacole':
@@ -29,6 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
         case 'limparPedido':
             crudVenda::limparPedido();
+        break;
+
+        case 'atualizarPedido':
+            crudVenda::atualizarPedido();
+        break;
+
+        case 'atualizaEstoque':
+            crudVenda::atualizaEstoque();
         break;
 
         default:
